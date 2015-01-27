@@ -32,9 +32,33 @@ console.log(Math.round ((total / etsyItems.length) * 100) / 100);
 // ]
 
 
+var results = etsyItems.filter(function (item) {
+  return item.price < 18.00 && item.price > 14.00;
+});
+
+console.log(results[0].title);
+console.log(results[1].title);
+console.log(results[2].title);
+
+
+
+
+
 // QUESTION THREE
-// Show me how find the item with a "GBP" curreny code and print its name and price. Please console.log the one you find.
+// Show me how find the item with a "GBP" currency code and print its name and price. Please console.log the one you find.
 // The output should be "1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18"
+
+
+//return 'item.name && item.price' IF 'currency_code' == 'GBP'
+
+var gbpCode = etsyItems.filter(function(item) {
+    return item.currency_code == 'GBP';
+});
+
+console.log (gbpCode[0].title);
+console.log (gbpCode[1].title);
+console.log (gbpCode[2].title);
+
 
 
 // QUESTION FOUR
@@ -46,6 +70,8 @@ console.log(Math.round ((total / etsyItems.length) * 100) / 100);
 // Medium Size, Welcome To Our Firepit-Where Friends And Marshmallows Get Toasted At The Same Time-Painted Wood Sign-Custom Colors is made of wood.
 // Magnetic Wall Mount Bottle Opener Barware Set - Stainless Steel or Black - Personalized if you like! is made of wood.
 // Engraved Pocket Knife, Personalized Groomsmen Gift, Ring Bearer Gift, Graduation Gift, 4 Knives is made of wood.
+
+
 
 
 // QUESTION FIVE
